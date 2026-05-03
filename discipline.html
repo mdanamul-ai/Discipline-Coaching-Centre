@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discipline Coaching Centre | Stop Drifting. Start Dominating.</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-hover': '#B8952E',
+                        dark: '#0a0a0a',
+                        charcoal: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-gradient-hero { background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2070'); background-size: cover; background-position: center; }
+        .selection-gold::selection { background: #D4AF37; color: #0a0a0a; }
+        .nav-active { color: #D4AF37 !important; }
+        .card-glow:hover { border-color: #D4AF37; box-shadow: 0 0 30px rgba(212,175,55,0.15); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, opacity 0.3s ease-out; opacity: 0; }
+        .accordion-active .accordion-content { max-height: 200px; opacity: 1; }
+        .accordion-active .chevron { transform: rotate(180deg); color: #D4AF37; }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans selection-gold">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-dark/90 backdrop-blur-md border-b border-white/10 h-20">
+        <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+            <a href="#home" class="text-2xl font-display font-black tracking-widest text-gold">DISCIPLINE</a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link uppercase text-sm font-bold tracking-widest transition-colors hover:text-gold text-gray-400">Home</a>
+                <a href="#about" class="nav-link uppercase text-sm font-bold tracking-widest transition-colors hover:text-gold text-gray-400">About</a>
+                <a href="#programs" class="nav-link uppercase text-sm font-bold tracking-widest transition-colors hover:text-gold text-gray-400">Programs</a>
+                <a href="#testimonials" class="nav-link uppercase text-sm font-bold tracking-widest transition-colors hover:text-gold text-gray-400">Testimonials</a>
+                <a href="#faq" class="nav-link uppercase text-sm font-bold tracking-widest transition-colors hover:text-gold text-gray-400">FAQ</a>
+                <a href="#contact" class="nav-link uppercase text-sm font-bold tracking-widest transition-colors hover:text-gold text-gray-400">Contact</a>
+                <a href="#contact" class="bg-gold text-dark px-6 py-2 rounded-sm font-display font-bold uppercase text-sm hover:bg-gold-hover transition-all transform hover:scale-105 active:scale-95 shadow-lg">Book Free Call</a>
+            </div>
+
+            <button class="md:hidden text-white" id="menu-toggle">
+                <i data-lucide="menu" size="32"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-dark border-b border-white/10 p-8 flex flex-col space-y-6 text-center z-40">
+            <a href="#home" class="text-xl font-display font-bold uppercase tracking-widest text-white hover:text-gold">Home</a>
+            <a href="#about" class="text-xl font-display font-bold uppercase tracking-widest text-white hover:text-gold">About</a>
+            <a href="#programs" class="text-xl font-display font-bold uppercase tracking-widest text-white hover:text-gold">Programs</a>
+            <a href="#testimonials" class="text-xl font-display font-bold uppercase tracking-widest text-white hover:text-gold">Testimonials</a>
+            <a href="#faq" class="text-xl font-display font-bold uppercase tracking-widest text-white hover:text-gold">FAQ</a>
+            <a href="#contact" class="text-xl font-display font-bold uppercase tracking-widest text-white hover:text-gold">Contact</a>
+            <a href="#contact" class="bg-gold text-dark px-6 py-4 rounded-sm font-display font-bold uppercase text-sm">Book Free Call</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+        <div class="relative z-30 text-center px-4 max-w-5xl mx-auto">
+            <p class="text-gold font-display font-bold uppercase tracking-[0.5em] mb-4 text-sm md:text-base animate-pulse">Elite Performance Architecture</p>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-display font-black uppercase leading-tight md:leading-[0.85] tracking-tighter mb-8" data-aos="fade-up">
+                Stop Drifting.<br/>
+                <span class="text-gold">Start Dominating.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 font-sans max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">
+                We don't coach comfort. We engineer champions. Unlock the peak version of yourself through radical discipline.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6" data-aos="zoom-in" data-aos-delay="400">
+                <a href="#contact" class="bg-gold text-dark px-8 py-4 rounded-sm font-display font-bold uppercase tracking-wider hover:bg-gold-hover transition-all transform hover:scale-105 shadow-xl">Book Your Free Strategy Call</a>
+                <a href="#about" class="border-2 border-gold text-gold px-8 py-4 rounded-sm font-display font-bold uppercase tracking-wider hover:bg-gold hover:text-dark transition-all transform hover:scale-105">See Our Results</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 animate-bounce">
+            <a href="#about"><i data-lucide="chevron-down" size="40" class="text-gold opacity-50"></i></a>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <section class="bg-charcoal py-10 border-y border-white/5 relative z-40">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-around gap-8 text-center" data-aos="fade-in">
+            <div class="flex flex-col items-center">
+                <span class="text-4xl font-display font-black text-gold">500+</span>
+                <span class="text-xs uppercase tracking-widest text-gray-400 font-bold mt-1">Lives Transformed</span>
+            </div>
+            <div class="h-12 w-px bg-white/10 hidden md:block"></div>
+            <div class="flex flex-col items-center">
+                <span class="text-4xl font-display font-black text-gold">95%</span>
+                <span class="text-xs uppercase tracking-widest text-gray-400 font-bold mt-1">Client Retention</span>
+            </div>
+            <div class="h-12 w-px bg-white/10 hidden md:block"></div>
+            <div class="flex flex-col items-center">
+                <span class="text-4xl font-display font-black text-gold">3+</span>
+                <span class="text-xs uppercase tracking-widest text-gray-400 font-bold mt-1">Years of Results</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <p class="text-gold font-display font-bold uppercase tracking-widest mb-4">Our Mission</p>
+                    <h2 class="text-4xl md:text-5xl font-display font-black uppercase mb-8 leading-tight">
+                        Built for Those Who Are Done Making Excuses
+                    </h2>
+                    <div class="space-y-6 text-gray-400 font-sans text-lg leading-relaxed mb-10">
+                        <p>At Discipline Coaching Centre, we believe that motivation is a fleeting emotion, but discipline is a permanent system. Most people fail because they wait for the "right time" or "inspiration" to strike.</p>
+                        <p>We provide the elite architecture, accountability, and psychological shifting required to turn potential into consistent, high-impact performance.</p>
+                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <li class="flex items-center space-x-3"><i data-lucide="check" class="text-gold" size="20"></i><span class="font-bold text-white uppercase text-sm">Radical Accountability</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="check" class="text-gold" size="20"></i><span class="font-bold text-white uppercase text-sm">Systematic Growth</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="check" class="text-gold" size="20"></i><span class="font-bold text-white uppercase text-sm">Mental Fortitude</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="check" class="text-gold" size="20"></i><span class="font-bold text-white uppercase text-sm">Unwavering Focus</span></li>
+                    </ul>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-gold z-0"></div>
+                    <div class="relative z-10 overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1533227268408-a76e7ddbf764?auto=format&fit=crop&q=80&w=1000" alt="Coach" class="w-full h-[600px] object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-5xl font-display font-black mb-4 uppercase tracking-tighter" data-aos="fade-up">Elite Programs</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-dark p-8 border border-white/5 card-glow transition-all duration-500 flex flex-col group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6"><i data-lucide="zap" size="40" class="text-gold"></i></div>
+                    <h3 class="text-2xl font-display font-black uppercase mb-4">1-on-1 Elite Coaching</h3>
+                    <p class="text-gray-400 mb-8 flex-grow">Direct access to our master coaches for personalized strategic architecture and obsessive accountability.</p>
+                    <div class="text-gold font-display font-bold text-xl mb-6">Custom Intake Only</div>
+                    <a href="#contact" class="block text-center border-2 border-gold text-gold py-3 rounded-sm font-display font-bold uppercase transition-all hover:bg-gold hover:text-dark">Apply Now</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-dark p-8 border border-white/5 card-glow transition-all duration-500 flex flex-col group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6"><i data-lucide="users" size="40" class="text-gold"></i></div>
+                    <h3 class="text-2xl font-display font-black uppercase mb-4">Group Mastery Program</h3>
+                    <p class="text-gray-400 mb-8 flex-grow">Join a tribe of high-performers. Collaborative growth, shared struggle, and unified victory.</p>
+                    <div class="text-gold font-display font-bold text-xl mb-6">$499 / Month</div>
+                    <a href="#contact" class="block text-center border-2 border-gold text-gold py-3 rounded-sm font-display font-bold uppercase transition-all hover:bg-gold hover:text-dark">Apply Now</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-dark p-8 border border-white/5 card-glow transition-all duration-500 flex flex-col group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6"><i data-lucide="calendar" size="40" class="text-gold"></i></div>
+                    <h3 class="text-2xl font-display font-black uppercase mb-4">90-Day Transformation</h3>
+                    <p class="text-gray-400 mb-8 flex-grow">A brutal, results-oriented sprint to reset your habits and redefine your baseline state.</p>
+                    <div class="text-gold font-display font-bold text-xl mb-6">$1,499 Total</div>
+                    <a href="#contact" class="block text-center border-2 border-gold text-gold py-3 rounded-sm font-display font-bold uppercase transition-all hover:bg-gold hover:text-dark">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-24 bg-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-display font-black mb-4 uppercase tracking-tighter" data-aos="fade-up">The Process</h2>
+            <div class="w-24 h-1 bg-gold mx-auto mt-6 mb-20"></div>
+            
+            <div class="grid md:grid-cols-3 gap-12 text-center relative">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg font-display font-black text-dark text-xl">1</div>
+                    <h3 class="text-2xl font-display font-black uppercase mb-4">Book a Free Call</h3>
+                    <p class="text-gray-400 leading-relaxed">We audit your current state and identify the bottlenecks holding you back.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg font-display font-black text-dark text-xl">2</div>
+                    <h3 class="text-2xl font-display font-black uppercase mb-4">Get Your Plan</h3>
+                    <p class="text-gray-400 leading-relaxed">Receive a precise blueprint for your morning, training, and mindset.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg font-display font-black text-dark text-xl">3</div>
+                    <h3 class="text-2xl font-display font-black uppercase mb-4">Execute & Transform</h3>
+                    <p class="text-gray-400 leading-relaxed">Immediate deployment under elite pressure. You provide the effort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-display font-black mb-16 text-center uppercase tracking-tighter" data-aos="fade-up">Victory Reports</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark p-8 border border-white/5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex space-x-1 mb-6 text-gold"><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i></div>
+                    <p class="italic text-gray-300 text-lg mb-8">"Discipline Coaching saved my life. I went from a depressed office worker to a peak athlete in 90 days."</p>
+                    <h4 class="font-display font-bold uppercase">John R.</h4>
+                    <p class="text-gold text-sm font-bold uppercase tracking-widest">Lost 22kg in 3 months</p>
+                </div>
+                <div class="bg-dark p-8 border border-white/5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex space-x-1 mb-6 text-gold"><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i></div>
+                    <p class="italic text-gray-300 text-lg mb-8">"I thought I was 'burnt out'. Turns out I was just undisciplined. The systems they taught me are effortless now."</p>
+                    <h4 class="font-display font-bold uppercase">Sarah M.</h4>
+                    <p class="text-gold text-sm font-bold uppercase tracking-widest">Energy peak optimization</p>
+                </div>
+                <div class="bg-dark p-8 border border-white/5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex space-x-1 mb-6 text-gold"><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i><i data-lucide="star" fill="#D4AF37" size="18"></i></div>
+                    <p class="italic text-gray-300 text-lg mb-8">"When you master your morning, you master your income. My business revenue tripled after joining."</p>
+                    <h4 class="font-display font-bold uppercase">David L.</h4>
+                    <p class="text-gold text-sm font-bold uppercase tracking-widest">Revenue tripled</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-dark">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-display font-black mb-16 text-center uppercase tracking-tighter" data-aos="fade-up">Common Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item border-b border-gray-800">
+                    <button class="w-full py-6 flex items-center justify-between text-left group">
+                        <span class="text-xl font-display font-bold uppercase">What is the coaching cost?</span>
+                        <i data-lucide="chevron-down" class="chevron transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 text-gray-400">Costs vary by program. Our transformation sprints start at $1,499. Ongoing elite coaching is custom-quoted.</p>
+                    </div>
+                </div>
+                <div class="faq-item border-b border-gray-800">
+                    <button class="w-full py-6 flex items-center justify-between text-left group">
+                        <span class="text-xl font-display font-bold uppercase">Who is this for?</span>
+                        <i data-lucide="chevron-down" class="chevron transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 text-gray-400">High-level executives, entrepreneurs, and anyone ready to sacrifice comfort for results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gold z-0 transform -skew-y-2 translate-y-12"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center bg-dark py-20 border border-white/10 shadow-3xl" data-aos="zoom-in">
+            <h2 class="text-5xl md:text-7xl font-display font-black uppercase mb-6 leading-tight">Your Next Chapter Starts Today.</h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 italic">"Limited spots available for the next intake. Act now."</p>
+            <form class="max-w-md mx-auto flex flex-col gap-4" onsubmit="alert('Success! Our team will contact you.'); return false;">
+                <input type="text" placeholder="FULL NAME" required class="bg-charcoal border border-white/10 p-5 focus:border-gold outline-none uppercase font-bold tracking-widest text-sm">
+                <input type="email" placeholder="EMAIL ADDRESS" required class="bg-charcoal border border-white/10 p-5 focus:border-gold outline-none uppercase font-bold tracking-widest text-sm">
+                <button type="submit" class="bg-gold text-dark px-8 py-4 rounded-sm font-display font-bold uppercase tracking-wider hover:bg-gold-hover transition-all">Claim Your Free Session</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12">
+            <div class="col-span-1 md:col-span-2">
+                <div class="text-3xl font-display font-black tracking-widest text-gold mb-6">DISCIPLINE</div>
+                <p class="text-gray-500 mb-8 max-w-sm">The global standard for peak performance. No excuses, only results.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-gold text-gray-400 hover:text-gold"><i data-lucide="instagram" size="20"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-gold text-gray-400 hover:text-gold"><i data-lucide="youtube" size="20"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-display font-bold uppercase mb-6">Links</h4>
+                <ul class="space-y-4 text-gray-500 text-xs font-bold uppercase tracking-widest">
+                    <li><a href="#about" class="hover:text-gold">About</a></li>
+                    <li><a href="#programs" class="hover:text-gold">Programs</a></li>
+                    <li><a href="#testimonials" class="hover:text-gold">Results</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-display font-bold uppercase mb-6">HQ</h4>
+                <p class="text-gray-500 text-xs font-bold uppercase tracking-widest">London, UK<br/>Support: help@discipline.center</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Lucide
+        lucide.createIcons();
+        // Init AOS
+        AOS.init({ duration: 800, once: true });
+
+        // Menu Toggle
+        const menuBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('accordion-active');
+            });
+        });
+
+        // Scroll highlight
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(s => {
+                if (pageYOffset >= s.offsetTop - 100) current = s.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href').includes(current)) link.classList.add('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>
